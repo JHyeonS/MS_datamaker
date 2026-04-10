@@ -1,0 +1,5 @@
+split_name,split_ch_start,split_ch_end,axis_name,axis_top,axis_bottom
+split_01_ch4000_4405,4000,4405,Depth (m),-1024.2,-610.4
+split_02_ch4450_4855,4450,4855,Depth (m),ch 4450,ch 4855
+split_03_ch4900_5305,4900,5305,Depth (m),ch 4900,ch 5305
+split_04_ch5350_5755,5350,5755,Depth (m),ch 5350,ch 5755
