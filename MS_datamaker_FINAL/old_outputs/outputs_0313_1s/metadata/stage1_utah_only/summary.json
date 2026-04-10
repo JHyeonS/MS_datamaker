@@ -1,0 +1,64 @@
+{
+  "experiment": "stage1_utah_only",
+  "seed": 42,
+  "site": "utah",
+  "description": "Site-specific experiment. Pretrain on same-site non-test groups. Fine-tune/evaluate on same-site labeled splits.",
+  "pretrain": {
+    "n_rows": 4127,
+    "n_groups": 310,
+    "site_counts": {
+      "utah": 4127
+    },
+    "label_counts": {
+      "2": 3422,
+      "0": 570,
+      "1": 135
+    },
+    "label_name_counts": {
+      "unlabel": 3422,
+      "noise": 570,
+      "event": 135
+    }
+  },
+  "train": {
+    "n_rows": 375,
+    "n_groups": 72,
+    "site_counts": {
+      "utah": 375
+    },
+    "label_counts": {
+      "0": 240,
+      "1": 135
+    },
+    "label_name_counts": {
+      "noise": 240,
+      "event": 135
+    }
+  },
+  "val": {
+    "n_rows": 330,
+    "n_groups": 11,
+    "site_counts": {
+      "utah": 330
+    },
+    "label_counts": {
+      "0": 330
+    },
+    "label_name_counts": {
+      "noise": 330
+    }
+  },
+  "test": {
+    "n_rows": 330,
+    "n_groups": 11,
+    "site_counts": {
+      "utah": 330
+    },
+    "label_counts": {
+      "0": 330
+    },
+    "label_name_counts": {
+      "noise": 330
+    }
+  }
+}

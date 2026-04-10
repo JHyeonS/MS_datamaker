@@ -1,0 +1,93 @@
+{
+  "experiment": "stage3_utah_2019_to_pohang",
+  "requested_seed": 42,
+  "used_seed": 42,
+  "source_site": "utah_2019",
+  "target_site": "pohang",
+  "description": "Cross-site transfer. Train/val on source labeled only, test on target labeled only. Pretrain on source pool using only noise+unlabeled samples (labeled event excluded). Source split is leakage-safe.",
+  "constraints": {
+    "group_leakage_free": true,
+    "max_split_tries": 1000,
+    "pretrain_forbid_labeled_event": true,
+    "train_required": {
+      "0": 1,
+      "1": 1
+    },
+    "val_required": {
+      "0": 1,
+      "1": 1
+    },
+    "test_required": {
+      "0": 1,
+      "1": 1
+    }
+  },
+  "validation": {
+    "ok": true,
+    "messages": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  "pretrain": {
+    "n_rows": 2400,
+    "n_groups": 341,
+    "site_counts": {
+      "utah_2019": 2400
+    },
+    "label_counts": {
+      "2": 1500,
+      "0": 900
+    },
+    "label_name_counts": {
+      "unlabel": 1500,
+      "noise": 900
+    }
+  },
+  "train": {
+    "n_rows": 646,
+    "n_groups": 78,
+    "site_counts": {
+      "utah_2019": 646
+    },
+    "label_counts": {
+      "0": 450,
+      "1": 196
+    },
+    "label_name_counts": {
+      "noise": 450,
+      "event": 196
+    }
+  },
+  "val": {
+    "n_rows": 461,
+    "n_groups": 16,
+    "site_counts": {
+      "utah_2019": 461
+    },
+    "label_counts": {
+      "0": 450,
+      "1": 11
+    },
+    "label_name_counts": {
+      "noise": 450,
+      "event": 11
+    }
+  },
+  "test": {
+    "n_rows": 1133,
+    "n_groups": 81,
+    "site_counts": {
+      "pohang": 1133
+    },
+    "label_counts": {
+      "0": 750,
+      "1": 383
+    },
+    "label_name_counts": {
+      "noise": 750,
+      "event": 383
+    }
+  }
+}

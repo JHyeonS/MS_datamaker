@@ -1,0 +1,154 @@
+2026-03-12 10:48:33,021 | INFO | ========== Build NPY Dataset Start ==========
+2026-03-12 10:48:33,021 | INFO | out_root       : /home/ted1204/MS_datamaker_merge/outputs_npy
+2026-03-12 10:48:33,021 | INFO | csv inputs     : ['/home/ted1204/MS_datamaker_merge/outputs/segment_plan_event.csv', '/home/ted1204/MS_datamaker_merge/outputs/segment_plan_noise.csv', '/home/ted1204/MS_datamaker_merge/outputs/segment_plan_unlabel.csv']
+2026-03-12 10:48:33,021 | INFO | dtype          : float32
+2026-03-12 10:48:33,021 | INFO | overwrite      : False
+2026-03-12 10:48:33,021 | INFO | log_every      : 100
+2026-03-12 10:48:33,021 | INFO | fallback fs    : None
+2026-03-12 10:48:33,021 | INFO | target_fs      : 1000.0
+2026-03-12 10:48:33,021 | INFO | site_fs_map    : {'pohang': 1000.0, 'utah': 2000.0}
+2026-03-12 10:48:33,021 | INFO | =============================================
+2026-03-12 10:48:33,066 | INFO | Loaded CSV: /home/ted1204/MS_datamaker_merge/outputs/segment_plan_event.csv | rows=542
+2026-03-12 10:48:33,176 | INFO | Loaded CSV: /home/ted1204/MS_datamaker_merge/outputs/segment_plan_noise.csv | rows=1650
+2026-03-12 10:48:33,544 | INFO | Loaded CSV: /home/ted1204/MS_datamaker_merge/outputs/segment_plan_unlabel.csv | rows=9060
+2026-03-12 10:48:33,548 | INFO | Total merged rows: 11252
+2026-03-12 10:49:23,444 | INFO | processed=100/11252 (0.89%) | failed=0 | speed=2.00 samples/sec | elapsed=0.83 min
+2026-03-12 10:50:19,189 | INFO | processed=200/11252 (1.78%) | failed=0 | speed=1.89 samples/sec | elapsed=1.76 min
+2026-03-12 10:51:09,334 | INFO | processed=300/11252 (2.67%) | failed=0 | speed=1.93 samples/sec | elapsed=2.60 min
+2026-03-12 10:52:31,667 | INFO | processed=400/11252 (3.55%) | failed=0 | speed=1.68 samples/sec | elapsed=3.97 min
+2026-03-12 10:52:38,725 | INFO | processed=500/11252 (4.44%) | failed=0 | speed=2.04 samples/sec | elapsed=4.09 min
+2026-03-12 10:53:21,896 | INFO | processed=600/11252 (5.33%) | failed=0 | speed=2.08 samples/sec | elapsed=4.81 min
+2026-03-12 10:55:04,520 | INFO | processed=700/11252 (6.22%) | failed=0 | speed=1.79 samples/sec | elapsed=6.52 min
+2026-03-12 10:56:02,855 | INFO | processed=800/11252 (7.11%) | failed=0 | speed=1.78 samples/sec | elapsed=7.49 min
+2026-03-12 10:56:59,836 | INFO | processed=900/11252 (8.00%) | failed=0 | speed=1.78 samples/sec | elapsed=8.44 min
+2026-03-12 10:57:57,396 | INFO | processed=1000/11252 (8.89%) | failed=0 | speed=1.77 samples/sec | elapsed=9.40 min
+2026-03-12 10:58:53,011 | INFO | processed=1100/11252 (9.78%) | failed=0 | speed=1.78 samples/sec | elapsed=10.32 min
+2026-03-12 10:59:51,567 | INFO | processed=1200/11252 (10.66%) | failed=0 | speed=1.77 samples/sec | elapsed=11.30 min
+2026-03-12 11:00:56,075 | INFO | processed=1300/11252 (11.55%) | failed=0 | speed=1.75 samples/sec | elapsed=12.38 min
+2026-03-12 11:00:56,302 | INFO | processed=1400/11252 (12.44%) | failed=0 | speed=1.88 samples/sec | elapsed=12.38 min
+2026-03-12 11:00:56,504 | INFO | processed=1500/11252 (13.33%) | failed=0 | speed=2.02 samples/sec | elapsed=12.38 min
+2026-03-12 11:00:56,708 | INFO | processed=1600/11252 (14.22%) | failed=0 | speed=2.15 samples/sec | elapsed=12.39 min
+2026-03-12 11:00:56,906 | INFO | processed=1700/11252 (15.11%) | failed=0 | speed=2.29 samples/sec | elapsed=12.39 min
+2026-03-12 11:00:57,095 | INFO | processed=1800/11252 (16.00%) | failed=0 | speed=2.42 samples/sec | elapsed=12.39 min
+2026-03-12 11:00:57,289 | INFO | processed=1900/11252 (16.89%) | failed=0 | speed=2.55 samples/sec | elapsed=12.40 min
+2026-03-12 11:00:57,477 | INFO | processed=2000/11252 (17.77%) | failed=0 | speed=2.69 samples/sec | elapsed=12.40 min
+2026-03-12 11:00:57,660 | INFO | processed=2100/11252 (18.66%) | failed=0 | speed=2.82 samples/sec | elapsed=12.40 min
+2026-03-12 11:01:03,152 | INFO | processed=2200/11252 (19.55%) | failed=0 | speed=2.93 samples/sec | elapsed=12.49 min
+2026-03-12 11:02:32,702 | INFO | processed=2300/11252 (20.44%) | failed=0 | speed=2.74 samples/sec | elapsed=13.99 min
+2026-03-12 11:03:50,540 | INFO | processed=2400/11252 (21.33%) | failed=0 | speed=2.62 samples/sec | elapsed=15.28 min
+2026-03-12 11:05:01,790 | INFO | processed=2500/11252 (22.22%) | failed=0 | speed=2.53 samples/sec | elapsed=16.47 min
+2026-03-12 11:05:57,345 | INFO | processed=2600/11252 (23.11%) | failed=0 | speed=2.49 samples/sec | elapsed=17.40 min
+2026-03-12 11:06:51,518 | INFO | processed=2700/11252 (24.00%) | failed=0 | speed=2.46 samples/sec | elapsed=18.30 min
+2026-03-12 11:07:46,576 | INFO | processed=2800/11252 (24.88%) | failed=0 | speed=2.43 samples/sec | elapsed=19.22 min
+2026-03-12 11:08:43,540 | INFO | processed=2900/11252 (25.77%) | failed=0 | speed=2.40 samples/sec | elapsed=20.17 min
+2026-03-12 11:09:42,260 | INFO | processed=3000/11252 (26.66%) | failed=0 | speed=2.36 samples/sec | elapsed=21.15 min
+2026-03-12 11:10:34,473 | INFO | processed=3100/11252 (27.55%) | failed=0 | speed=2.35 samples/sec | elapsed=22.02 min
+2026-03-12 11:11:31,779 | INFO | processed=3200/11252 (28.44%) | failed=0 | speed=2.32 samples/sec | elapsed=22.97 min
+2026-03-12 11:12:25,982 | INFO | processed=3300/11252 (29.33%) | failed=0 | speed=2.30 samples/sec | elapsed=23.87 min
+2026-03-12 11:13:21,413 | INFO | processed=3400/11252 (30.22%) | failed=0 | speed=2.29 samples/sec | elapsed=24.80 min
+2026-03-12 11:14:12,158 | INFO | processed=3500/11252 (31.11%) | failed=0 | speed=2.27 samples/sec | elapsed=25.64 min
+2026-03-12 11:15:01,104 | INFO | processed=3600/11252 (31.99%) | failed=0 | speed=2.27 samples/sec | elapsed=26.46 min
+2026-03-12 11:15:56,599 | INFO | processed=3700/11252 (32.88%) | failed=0 | speed=2.25 samples/sec | elapsed=27.38 min
+2026-03-12 11:17:13,752 | INFO | processed=3800/11252 (33.77%) | failed=0 | speed=2.21 samples/sec | elapsed=28.67 min
+2026-03-12 11:18:16,131 | INFO | processed=3900/11252 (34.66%) | failed=0 | speed=2.19 samples/sec | elapsed=29.71 min
+2026-03-12 11:19:16,415 | INFO | processed=4000/11252 (35.55%) | failed=0 | speed=2.17 samples/sec | elapsed=30.71 min
+2026-03-12 11:20:08,862 | INFO | processed=4100/11252 (36.44%) | failed=0 | speed=2.16 samples/sec | elapsed=31.59 min
+2026-03-12 11:21:01,302 | INFO | processed=4200/11252 (37.33%) | failed=0 | speed=2.16 samples/sec | elapsed=32.46 min
+2026-03-12 11:21:56,181 | INFO | processed=4300/11252 (38.22%) | failed=0 | speed=2.15 samples/sec | elapsed=33.38 min
+2026-03-12 11:22:48,726 | INFO | processed=4400/11252 (39.10%) | failed=0 | speed=2.14 samples/sec | elapsed=34.25 min
+2026-03-12 11:23:10,727 | ERROR | [FAILED] idx=4451 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=34000, trace_len=30000
+2026-03-12 11:23:10,728 | ERROR | [FAILED] idx=4452 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=36000, trace_len=30000
+2026-03-12 11:23:10,730 | ERROR | [FAILED] idx=4453 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=46000, trace_len=30000
+2026-03-12 11:23:10,732 | ERROR | [FAILED] idx=4454 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=50000, trace_len=30000
+2026-03-12 11:23:10,733 | ERROR | [FAILED] idx=4455 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=54000, trace_len=30000
+2026-03-12 11:23:10,735 | ERROR | [FAILED] idx=4456 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=56000, trace_len=30000
+2026-03-12 11:23:13,069 | ERROR | [FAILED] idx=4466 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=34000, trace_len=30000
+2026-03-12 11:23:13,071 | ERROR | [FAILED] idx=4467 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=36000, trace_len=30000
+2026-03-12 11:23:13,073 | ERROR | [FAILED] idx=4468 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=46000, trace_len=30000
+2026-03-12 11:23:13,074 | ERROR | [FAILED] idx=4469 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=50000, trace_len=30000
+2026-03-12 11:23:13,076 | ERROR | [FAILED] idx=4470 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=54000, trace_len=30000
+2026-03-12 11:23:13,077 | ERROR | [FAILED] idx=4471 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090723.sgy: s1=56000, trace_len=30000
+2026-03-12 11:23:14,537 | ERROR | [FAILED] idx=4479 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090738.sgy: s1=34000, trace_len=30000
+2026-03-12 11:23:14,538 | ERROR | [FAILED] idx=4480 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090738.sgy: s1=36000, trace_len=30000
+2026-03-12 11:23:14,540 | ERROR | [FAILED] idx=4481 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090738.sgy: s1=40000, trace_len=30000
+2026-03-12 11:23:14,541 | ERROR | [FAILED] idx=4482 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090738.sgy: s1=48000, trace_len=30000
+2026-03-12 11:23:14,543 | ERROR | [FAILED] idx=4483 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090738.sgy: s1=54000, trace_len=30000
+2026-03-12 11:23:14,545 | ERROR | [FAILED] idx=4484 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090738.sgy: s1=56000, trace_len=30000
+2026-03-12 11:23:14,546 | ERROR | [FAILED] idx=4485 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090738.sgy: s1=58000, trace_len=30000
+2026-03-12 11:23:14,548 | ERROR | [FAILED] idx=4486 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090738.sgy: s1=60000, trace_len=30000
+2026-03-12 11:23:21,591 | INFO | processed=4500/11252 (39.99%) | failed=49 | speed=2.16 samples/sec | elapsed=34.80 min
+2026-03-12 11:23:31,725 | ERROR | [FAILED] idx=4647 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426090908.sgy: s1=40000, trace_len=30000
+2026-03-12 11:23:46,884 | INFO | processed=4600/11252 (40.88%) | failed=148 | speed=2.18 samples/sec | elapsed=35.22 min
+2026-03-12 11:23:55,840 | ERROR | [FAILED] idx=4842 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426091053.sgy: s1=50000, trace_len=30000
+2026-03-12 11:24:10,562 | INFO | processed=4700/11252 (41.77%) | failed=245 | speed=2.20 samples/sec | elapsed=35.62 min
+2026-03-12 11:24:22,004 | ERROR | [FAILED] idx=5052 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426205638.sgy: s1=42000, trace_len=30000
+2026-03-12 11:24:32,093 | INFO | processed=4800/11252 (42.66%) | failed=348 | speed=2.22 samples/sec | elapsed=35.98 min
+2026-03-12 11:24:42,951 | ERROR | [FAILED] idx=5247 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426205823.sgy: s1=44000, trace_len=30000
+2026-03-12 11:24:54,025 | INFO | processed=4900/11252 (43.55%) | failed=432 | speed=2.25 samples/sec | elapsed=36.34 min
+2026-03-12 11:25:19,032 | ERROR | [FAILED] idx=5487 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426221553.sgy: s1=36000, trace_len=30000
+2026-03-12 11:25:21,501 | INFO | processed=5000/11252 (44.44%) | failed=512 | speed=2.26 samples/sec | elapsed=36.80 min
+2026-03-12 11:25:40,085 | ERROR | [FAILED] idx=5682 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426221753.sgy: s1=40000, trace_len=30000
+2026-03-12 11:25:43,834 | INFO | processed=5100/11252 (45.33%) | failed=619 | speed=2.29 samples/sec | elapsed=37.17 min
+2026-03-12 11:26:04,255 | ERROR | [FAILED] idx=5895 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426221938.sgy: s1=58000, trace_len=30000
+2026-03-12 11:26:05,042 | INFO | processed=5200/11252 (46.21%) | failed=701 | speed=2.31 samples/sec | elapsed=37.52 min
+2026-03-12 11:26:30,348 | INFO | processed=5300/11252 (47.10%) | failed=796 | speed=2.33 samples/sec | elapsed=37.95 min
+2026-03-12 11:26:30,788 | ERROR | [FAILED] idx=6101 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426224738.sgy: s1=48000, trace_len=30000
+2026-03-12 11:26:51,119 | ERROR | [FAILED] idx=6293 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426224908.sgy: s1=34000, trace_len=30000
+2026-03-12 11:26:52,410 | INFO | processed=5400/11252 (47.99%) | failed=908 | speed=2.35 samples/sec | elapsed=38.31 min
+2026-03-12 11:27:09,233 | ERROR | [FAILED] idx=6475 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426225038.sgy: s1=34000, trace_len=30000
+2026-03-12 11:27:17,727 | INFO | processed=5500/11252 (48.88%) | failed=1018 | speed=2.37 samples/sec | elapsed=38.74 min
+2026-03-12 11:27:36,794 | ERROR | [FAILED] idx=6689 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426232538.sgy: s1=42000, trace_len=30000
+2026-03-12 11:27:39,302 | INFO | processed=5600/11252 (49.77%) | failed=1110 | speed=2.39 samples/sec | elapsed=39.10 min
+2026-03-12 11:27:56,575 | ERROR | [FAILED] idx=6882 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190426232753.sgy: s1=42000, trace_len=30000
+2026-03-12 11:28:00,057 | INFO | processed=5700/11252 (50.66%) | failed=1222 | speed=2.41 samples/sec | elapsed=39.44 min
+2026-03-12 11:28:21,042 | ERROR | [FAILED] idx=7081 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190427091308.sgy: s1=58000, trace_len=30000
+2026-03-12 11:28:24,837 | INFO | processed=5800/11252 (51.55%) | failed=1318 | speed=2.43 samples/sec | elapsed=39.85 min
+2026-03-12 11:28:45,750 | ERROR | [FAILED] idx=7287 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190427091453.sgy: s1=50000, trace_len=30000
+2026-03-12 11:28:48,214 | INFO | processed=5900/11252 (52.44%) | failed=1411 | speed=2.44 samples/sec | elapsed=40.24 min
+2026-03-12 11:29:10,248 | INFO | processed=6000/11252 (53.32%) | failed=1493 | speed=2.46 samples/sec | elapsed=40.61 min
+2026-03-12 11:29:10,733 | ERROR | [FAILED] idx=7501 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190427093208.sgy: s1=60000, trace_len=30000
+2026-03-12 11:29:34,634 | INFO | processed=6100/11252 (54.21%) | failed=1574 | speed=2.48 samples/sec | elapsed=41.02 min
+2026-03-12 11:29:39,723 | ERROR | [FAILED] idx=7720 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190427102453.sgy: s1=40000, trace_len=30000
+2026-03-12 11:29:56,874 | INFO | processed=6200/11252 (55.10%) | failed=1668 | speed=2.50 samples/sec | elapsed=41.39 min
+2026-03-12 11:30:04,063 | ERROR | [FAILED] idx=7932 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190427102653.sgy: s1=44000, trace_len=30000
+2026-03-12 11:30:20,770 | INFO | processed=6300/11252 (55.99%) | failed=1774 | speed=2.51 samples/sec | elapsed=41.79 min
+2026-03-12 11:30:26,611 | ERROR | [FAILED] idx=8127 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190427102838.sgy: s1=44000, trace_len=30000
+2026-03-12 11:30:42,518 | INFO | processed=6400/11252 (56.88%) | failed=1873 | speed=2.53 samples/sec | elapsed=42.15 min
+2026-03-12 11:30:47,335 | ERROR | [FAILED] idx=8321 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429210953.sgy: s1=38000, trace_len=30000
+2026-03-12 11:31:04,038 | ERROR | [FAILED] idx=8491 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429211123.sgy: s1=56000, trace_len=30000
+2026-03-12 11:31:07,231 | INFO | processed=6500/11252 (57.77%) | failed=2008 | speed=2.55 samples/sec | elapsed=42.56 min
+2026-03-12 11:32:03,299 | ERROR | [FAILED] idx=8697 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429211323.sgy: s1=46000, trace_len=30000
+2026-03-12 11:32:04,480 | INFO | processed=6600/11252 (58.66%) | failed=2104 | speed=2.53 samples/sec | elapsed=43.52 min
+2026-03-12 11:32:33,139 | INFO | processed=6700/11252 (59.54%) | failed=2184 | speed=2.54 samples/sec | elapsed=43.99 min
+2026-03-12 11:32:38,891 | ERROR | [FAILED] idx=8920 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429211553.sgy: s1=34000, trace_len=30000
+2026-03-12 11:33:15,846 | INFO | processed=6800/11252 (60.43%) | failed=2270 | speed=2.54 samples/sec | elapsed=44.70 min
+2026-03-12 11:33:25,953 | ERROR | [FAILED] idx=9135 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429211808.sgy: s1=56000, trace_len=30000
+2026-03-12 11:33:51,452 | INFO | processed=6900/11252 (61.32%) | failed=2360 | speed=2.54 samples/sec | elapsed=45.30 min
+2026-03-12 11:34:05,032 | ERROR | [FAILED] idx=9342 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429212008.sgy: s1=36000, trace_len=30000
+2026-03-12 11:34:25,315 | INFO | processed=7000/11252 (62.21%) | failed=2471 | speed=2.54 samples/sec | elapsed=45.86 min
+2026-03-12 11:34:33,512 | ERROR | [FAILED] idx=9526 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429212138.sgy: s1=54000, trace_len=30000
+2026-03-12 11:34:56,754 | INFO | processed=7100/11252 (63.10%) | failed=2572 | speed=2.55 samples/sec | elapsed=46.39 min
+2026-03-12 11:35:07,291 | ERROR | [FAILED] idx=9732 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429212323.sgy: s1=44000, trace_len=30000
+2026-03-12 11:35:31,954 | INFO | processed=7200/11252 (63.99%) | failed=2662 | speed=2.55 samples/sec | elapsed=46.97 min
+2026-03-12 11:35:47,098 | ERROR | [FAILED] idx=9941 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429212508.sgy: s1=34000, trace_len=30000
+2026-03-12 11:36:04,528 | INFO | processed=7300/11252 (64.88%) | failed=2758 | speed=2.56 samples/sec | elapsed=47.52 min
+2026-03-12 11:36:18,586 | ERROR | [FAILED] idx=10137 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429212638.sgy: s1=32000, trace_len=30000
+2026-03-12 11:36:37,398 | INFO | processed=7400/11252 (65.77%) | failed=2855 | speed=2.57 samples/sec | elapsed=48.06 min
+2026-03-12 11:36:48,423 | ERROR | [FAILED] idx=10334 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429212853.sgy: s1=54000, trace_len=30000
+2026-03-12 11:37:07,096 | INFO | processed=7500/11252 (66.65%) | failed=2960 | speed=2.57 samples/sec | elapsed=48.56 min
+2026-03-12 11:37:19,089 | ERROR | [FAILED] idx=10525 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429213038.sgy: s1=44000, trace_len=30000
+2026-03-12 11:37:41,202 | ERROR | [FAILED] idx=10696 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429213238.sgy: s1=60000, trace_len=30000
+2026-03-12 11:37:42,301 | INFO | processed=7600/11252 (67.54%) | failed=3100 | speed=2.58 samples/sec | elapsed=49.15 min
+2026-03-12 11:38:04,390 | ERROR | [FAILED] idx=10871 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429214553.sgy: s1=42000, trace_len=30000
+2026-03-12 11:38:13,849 | INFO | processed=7700/11252 (68.43%) | failed=3240 | speed=2.58 samples/sec | elapsed=49.67 min
+2026-03-12 11:38:34,647 | ERROR | [FAILED] idx=11056 | ValueError: Time slice out of bounds for /home/ted1204/MS_datamaker_UTAH/data/unlabel/FORGE_78-32_iDASv3-P11_UTC190429214723.sgy: s1=60000, trace_len=30000
+2026-03-12 11:38:48,086 | INFO | processed=7800/11252 (69.32%) | failed=3340 | speed=2.59 samples/sec | elapsed=50.24 min
+2026-03-12 11:39:07,146 | INFO | ============== Build Finished ==============
+2026-03-12 11:39:07,146 | INFO | Saved manifest  : /home/ted1204/MS_datamaker_merge/outputs_npy/metadata/all_samples.csv
+2026-03-12 11:39:07,146 | INFO | Success         : 7864
+2026-03-12 11:39:07,146 | INFO | Failed          : 3388
+2026-03-12 11:39:07,147 | INFO | Elapsed (min)   : 50.54
+2026-03-12 11:39:07,147 | INFO | Avg speed       : 2.59 samples/sec
+2026-03-12 11:39:07,147 | INFO | Per site counts : {'pohang': 3407, 'utah': 4457}
+2026-03-12 11:39:07,147 | INFO | Per label counts: {'noise': 1650, 'event': 542, 'unlabel': 5672}
+2026-03-12 11:39:07,147 | INFO | ============================================

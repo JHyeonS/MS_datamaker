@@ -1,0 +1,95 @@
+{
+  "experiment": "stage1_pohang_only",
+  "requested_seed": 42,
+  "used_seed": 42,
+  "site": "pohang",
+  "description": "Site-specific experiment. Pretrain on same-site non-test pool using only noise+unlabeled samples (labeled event excluded). Fine-tune/evaluate on same-site labeled splits. Stage1 uses event-quota-first allocation, then noise allocation.",
+  "constraints": {
+    "group_leakage_free": true,
+    "max_split_tries": 1000,
+    "pretrain_forbid_labeled_event": true,
+    "stage1_event_quota_first": true,
+    "required_counts_by_split": {
+      "train": {
+        "0": 1,
+        "1": 1
+      },
+      "val": {
+        "0": 1,
+        "1": 1
+      },
+      "test": {
+        "0": 1,
+        "1": 1
+      }
+    }
+  },
+  "validation": {
+    "ok": true,
+    "messages": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  "pretrain": {
+    "n_rows": 2985,
+    "n_groups": 199,
+    "site_counts": {
+      "pohang": 2985
+    },
+    "label_counts": {
+      "2": 2250,
+      "0": 735
+    },
+    "label_name_counts": {
+      "unlabel": 2250,
+      "noise": 735
+    }
+  },
+  "train": {
+    "n_rows": 921,
+    "n_groups": 69,
+    "site_counts": {
+      "pohang": 921
+    },
+    "label_counts": {
+      "0": 720,
+      "1": 201
+    },
+    "label_name_counts": {
+      "noise": 720,
+      "event": 201
+    }
+  },
+  "val": {
+    "n_rows": 106,
+    "n_groups": 6,
+    "site_counts": {
+      "pohang": 106
+    },
+    "label_counts": {
+      "1": 91,
+      "0": 15
+    },
+    "label_name_counts": {
+      "event": 91,
+      "noise": 15
+    }
+  },
+  "test": {
+    "n_rows": 106,
+    "n_groups": 6,
+    "site_counts": {
+      "pohang": 106
+    },
+    "label_counts": {
+      "1": 91,
+      "0": 15
+    },
+    "label_name_counts": {
+      "event": 91,
+      "noise": 15
+    }
+  }
+}

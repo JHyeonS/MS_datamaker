@@ -1,0 +1,124 @@
+{
+  "experiment": "stage3_utah_to_pohang",
+  "seed": 42,
+  "source_site": "utah",
+  "target_site": "pohang",
+  "description": "Cross-site generalization. Train/val on source labeled only, test on target labeled only, pretrain on source full pool only. Quota-first constrained group-aware split.",
+  "source_min_requirements": {
+    "train": {
+      "noise": 100,
+      "event": 20,
+      "rows": 0,
+      "groups": 1
+    },
+    "val": {
+      "noise": 30,
+      "event": 15,
+      "rows": 0,
+      "groups": 1
+    },
+    "test": {}
+  },
+  "source_split_stats": {
+    "train": {
+      "noise": 570,
+      "event": 120,
+      "rows": 690,
+      "groups": 81
+    },
+    "val": {
+      "noise": 330,
+      "event": 15,
+      "rows": 345,
+      "groups": 13
+    },
+    "test": {
+      "noise": 0,
+      "event": 0,
+      "rows": 0,
+      "groups": 0
+    }
+  },
+  "target_test_min_requirements": {
+    "train": {},
+    "val": {},
+    "test": {
+      "noise": 30,
+      "event": 10,
+      "rows": 1,
+      "groups": 1
+    }
+  },
+  "target_test_stats": {
+    "train": {},
+    "val": {},
+    "test": {
+      "noise": 750,
+      "event": 407,
+      "rows": 1157,
+      "groups": 81
+    }
+  },
+  "pretrain": {
+    "n_rows": 4457,
+    "n_groups": 321,
+    "site_counts": {
+      "utah": 4457
+    },
+    "label_counts": {
+      "2": 3422,
+      "0": 900,
+      "1": 135
+    },
+    "label_name_counts": {
+      "unlabel": 3422,
+      "noise": 900,
+      "event": 135
+    }
+  },
+  "train": {
+    "n_rows": 690,
+    "n_groups": 81,
+    "site_counts": {
+      "utah": 690
+    },
+    "label_counts": {
+      "0": 570,
+      "1": 120
+    },
+    "label_name_counts": {
+      "noise": 570,
+      "event": 120
+    }
+  },
+  "val": {
+    "n_rows": 345,
+    "n_groups": 13,
+    "site_counts": {
+      "utah": 345
+    },
+    "label_counts": {
+      "0": 330,
+      "1": 15
+    },
+    "label_name_counts": {
+      "noise": 330,
+      "event": 15
+    }
+  },
+  "test": {
+    "n_rows": 1157,
+    "n_groups": 81,
+    "site_counts": {
+      "pohang": 1157
+    },
+    "label_counts": {
+      "0": 750,
+      "1": 407
+    },
+    "label_name_counts": {
+      "noise": 750,
+      "event": 407
+    }
+  }
+}

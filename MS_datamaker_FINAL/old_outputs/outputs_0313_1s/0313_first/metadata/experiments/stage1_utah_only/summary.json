@@ -1,0 +1,108 @@
+{
+  "experiment": "stage1_utah_only",
+  "seed": 42,
+  "site": "utah",
+  "description": "Site-specific experiment. Pretrain on same-site non-test groups. Fine-tune/evaluate on same-site labeled splits. Quota-first constrained group-aware split.",
+  "min_requirements": {
+    "train": {
+      "noise": 100,
+      "event": 20,
+      "rows": 0,
+      "groups": 1
+    },
+    "val": {
+      "noise": 30,
+      "event": 15,
+      "rows": 0,
+      "groups": 1
+    },
+    "test": {
+      "noise": 30,
+      "event": 15,
+      "rows": 0,
+      "groups": 1
+    }
+  },
+  "split_stats": {
+    "train": {
+      "noise": 360,
+      "event": 105,
+      "rows": 465,
+      "groups": 72
+    },
+    "val": {
+      "noise": 270,
+      "event": 15,
+      "rows": 285,
+      "groups": 11
+    },
+    "test": {
+      "noise": 270,
+      "event": 15,
+      "rows": 285,
+      "groups": 11
+    }
+  },
+  "pretrain": {
+    "n_rows": 4172,
+    "n_groups": 310,
+    "site_counts": {
+      "utah": 4172
+    },
+    "label_counts": {
+      "2": 3422,
+      "0": 630,
+      "1": 120
+    },
+    "label_name_counts": {
+      "unlabel": 3422,
+      "noise": 630,
+      "event": 120
+    }
+  },
+  "train": {
+    "n_rows": 465,
+    "n_groups": 72,
+    "site_counts": {
+      "utah": 465
+    },
+    "label_counts": {
+      "0": 360,
+      "1": 105
+    },
+    "label_name_counts": {
+      "noise": 360,
+      "event": 105
+    }
+  },
+  "val": {
+    "n_rows": 285,
+    "n_groups": 11,
+    "site_counts": {
+      "utah": 285
+    },
+    "label_counts": {
+      "0": 270,
+      "1": 15
+    },
+    "label_name_counts": {
+      "noise": 270,
+      "event": 15
+    }
+  },
+  "test": {
+    "n_rows": 285,
+    "n_groups": 11,
+    "site_counts": {
+      "utah": 285
+    },
+    "label_counts": {
+      "0": 270,
+      "1": 15
+    },
+    "label_name_counts": {
+      "noise": 270,
+      "event": 15
+    }
+  }
+}

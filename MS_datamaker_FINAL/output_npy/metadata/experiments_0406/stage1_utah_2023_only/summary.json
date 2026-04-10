@@ -1,0 +1,95 @@
+{
+  "experiment": "stage1_utah_2023_only",
+  "requested_seed": 42,
+  "used_seed": 42,
+  "site": "utah_2023",
+  "description": "Site-specific experiment. Pretrain on same-site non-test pool using only noise+unlabeled samples (labeled event excluded). Fine-tune/evaluate on same-site labeled splits. Stage1 uses event-quota-first allocation, then noise allocation.",
+  "constraints": {
+    "group_leakage_free": true,
+    "max_split_tries": 1000,
+    "pretrain_forbid_labeled_event": true,
+    "stage1_event_quota_first": true,
+    "required_counts_by_split": {
+      "train": {
+        "0": 1,
+        "1": 1
+      },
+      "val": {
+        "0": 1,
+        "1": 1
+      },
+      "test": {
+        "0": 1,
+        "1": 1
+      }
+    }
+  },
+  "validation": {
+    "ok": true,
+    "messages": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  "pretrain": {
+    "n_rows": 3924,
+    "n_groups": 221,
+    "site_counts": {
+      "utah_2023": 3924
+    },
+    "label_counts": {
+      "2": 2568,
+      "0": 1356
+    },
+    "label_name_counts": {
+      "unlabel": 2568,
+      "noise": 1356
+    }
+  },
+  "train": {
+    "n_rows": 2088,
+    "n_groups": 109,
+    "site_counts": {
+      "utah_2023": 2088
+    },
+    "label_counts": {
+      "0": 1152,
+      "1": 936
+    },
+    "label_name_counts": {
+      "noise": 1152,
+      "event": 936
+    }
+  },
+  "val": {
+    "n_rows": 648,
+    "n_groups": 34,
+    "site_counts": {
+      "utah_2023": 648
+    },
+    "label_counts": {
+      "1": 444,
+      "0": 204
+    },
+    "label_name_counts": {
+      "event": 444,
+      "noise": 204
+    }
+  },
+  "test": {
+    "n_rows": 643,
+    "n_groups": 36,
+    "site_counts": {
+      "utah_2023": 643
+    },
+    "label_counts": {
+      "1": 415,
+      "0": 228
+    },
+    "label_name_counts": {
+      "event": 415,
+      "noise": 228
+    }
+  }
+}

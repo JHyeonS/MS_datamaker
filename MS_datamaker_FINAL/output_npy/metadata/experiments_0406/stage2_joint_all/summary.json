@@ -1,0 +1,101 @@
+{
+  "experiment": "stage2_joint_all",
+  "requested_seed": 42,
+  "used_seed": 42,
+  "description": "Joint multi-site experiment. Pretrain on all non-test pool using only noise+unlabeled samples (labeled event excluded). Train/val/test on labeled only. Generic balanced group split with minimum count constraints.",
+  "constraints": {
+    "group_leakage_free": true,
+    "max_split_tries": 1000,
+    "pretrain_forbid_labeled_event": true,
+    "required_counts_by_split": {
+      "train": {
+        "0": 1,
+        "1": 1
+      },
+      "val": {
+        "0": 1,
+        "1": 1
+      },
+      "test": {
+        "0": 1,
+        "1": 1
+      }
+    }
+  },
+  "validation": {
+    "ok": true,
+    "messages": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  "pretrain": {
+    "n_rows": 10492,
+    "n_groups": 755,
+    "site_counts": {
+      "utah_2023": 3802,
+      "utah_2019": 3690,
+      "pohang": 3000
+    },
+    "label_counts": {
+      "2": 7936,
+      "0": 2556
+    },
+    "label_name_counts": {
+      "unlabel": 7936,
+      "noise": 2556
+    }
+  },
+  "train": {
+    "n_rows": 3461,
+    "n_groups": 264,
+    "site_counts": {
+      "utah_2023": 2165,
+      "pohang": 1059,
+      "utah_2019": 237
+    },
+    "label_counts": {
+      "1": 1769,
+      "0": 1692
+    },
+    "label_name_counts": {
+      "event": 1769,
+      "noise": 1692
+    }
+  },
+  "val": {
+    "n_rows": 1091,
+    "n_groups": 43,
+    "site_counts": {
+      "utah_2019": 660,
+      "utah_2023": 405,
+      "pohang": 26
+    },
+    "label_counts": {
+      "0": 864,
+      "1": 227
+    },
+    "label_name_counts": {
+      "noise": 864,
+      "event": 227
+    }
+  },
+  "test": {
+    "n_rows": 1067,
+    "n_groups": 47,
+    "site_counts": {
+      "utah_2023": 809,
+      "utah_2019": 210,
+      "pohang": 48
+    },
+    "label_counts": {
+      "0": 678,
+      "1": 389
+    },
+    "label_name_counts": {
+      "noise": 678,
+      "event": 389
+    }
+  }
+}

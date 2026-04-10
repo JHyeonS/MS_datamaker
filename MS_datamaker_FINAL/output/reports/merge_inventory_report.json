@@ -1,0 +1,30 @@
+{
+  "n_files": 1207,
+  "n_sources": 3,
+  "sources": [
+    "/home/ted1204/MS_Detection_Datamaker/MS_datamaker_FINAL/input/pohang/inventory.csv",
+    "/home/ted1204/MS_Detection_Datamaker/MS_datamaker_FINAL/input/utah_2019/inventory.csv",
+    "/home/ted1204/MS_Detection_Datamaker/MS_datamaker_FINAL/input/utah_2023/inventory.csv"
+  ],
+  "site_counts": {
+    "pohang": 504,
+    "utah_2019": 446,
+    "utah_2023": 257
+  },
+  "dataset_counts": {
+    "pohang": 504,
+    "utah_2019": 446,
+    "utah_2023": 257
+  },
+  "view_counts": {
+    "pohang": 504,
+    "utah_2019": 446,
+    "utah_2023": 257
+  },
+  "ext_counts": {
+    ".sgy": 703,
+    ".tdms": 504
+  },
+  "duplicated_file_path_count": 0,
+  "duplicated_group_id_count": 0
+}

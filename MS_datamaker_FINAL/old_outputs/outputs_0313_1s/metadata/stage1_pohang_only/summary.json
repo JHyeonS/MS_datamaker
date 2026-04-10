@@ -1,0 +1,68 @@
+{
+  "experiment": "stage1_pohang_only",
+  "seed": 42,
+  "site": "pohang",
+  "description": "Site-specific experiment. Pretrain on same-site non-test groups. Fine-tune/evaluate on same-site labeled splits.",
+  "pretrain": {
+    "n_rows": 2963,
+    "n_groups": 203,
+    "site_counts": {
+      "pohang": 2963
+    },
+    "label_counts": {
+      "2": 2250,
+      "0": 435,
+      "1": 278
+    },
+    "label_name_counts": {
+      "unlabel": 2250,
+      "noise": 435,
+      "event": 278
+    }
+  },
+  "train": {
+    "n_rows": 287,
+    "n_groups": 29,
+    "site_counts": {
+      "pohang": 287
+    },
+    "label_counts": {
+      "0": 165,
+      "1": 122
+    },
+    "label_name_counts": {
+      "noise": 165,
+      "event": 122
+    }
+  },
+  "val": {
+    "n_rows": 426,
+    "n_groups": 24,
+    "site_counts": {
+      "pohang": 426
+    },
+    "label_counts": {
+      "0": 270,
+      "1": 156
+    },
+    "label_name_counts": {
+      "noise": 270,
+      "event": 156
+    }
+  },
+  "test": {
+    "n_rows": 444,
+    "n_groups": 28,
+    "site_counts": {
+      "pohang": 444
+    },
+    "label_counts": {
+      "0": 315,
+      "1": 129
+    },
+    "label_name_counts": {
+      "noise": 315,
+      "event": 129
+    }
+  }
+}

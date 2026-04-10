@@ -1,0 +1,99 @@
+{
+  "experiment": "stage4_leave_one_site_out_utah_2023",
+  "requested_seed": 42,
+  "used_seed": 42,
+  "heldout_site": "utah_2023",
+  "source_sites": [
+    "pohang",
+    "utah_2019"
+  ],
+  "description": "Leave-one-site-out DG. Train/val on source sites, test on held-out site. Pretrain on source pool using only noise+unlabeled samples (labeled event excluded). Source split is leakage-safe.",
+  "constraints": {
+    "group_leakage_free": true,
+    "max_split_tries": 1000,
+    "pretrain_forbid_labeled_event": true,
+    "train_required": {
+      "0": 1,
+      "1": 1
+    },
+    "val_required": {
+      "0": 1,
+      "1": 1
+    },
+    "test_required": {
+      "0": 1,
+      "1": 1
+    }
+  },
+  "validation": {
+    "ok": true,
+    "messages": [
+      "ok",
+      "ok",
+      "ok"
+    ]
+  },
+  "pretrain": {
+    "n_rows": 4650,
+    "n_groups": 542,
+    "site_counts": {
+      "utah_2019": 2400,
+      "pohang": 2250
+    },
+    "label_counts": {
+      "2": 3000,
+      "0": 1650
+    },
+    "label_name_counts": {
+      "unlabel": 3000,
+      "noise": 1650
+    }
+  },
+  "train": {
+    "n_rows": 1123,
+    "n_groups": 132,
+    "site_counts": {
+      "pohang": 856,
+      "utah_2019": 267
+    },
+    "label_counts": {
+      "0": 735,
+      "1": 388
+    },
+    "label_name_counts": {
+      "noise": 735,
+      "event": 388
+    }
+  },
+  "val": {
+    "n_rows": 1117,
+    "n_groups": 43,
+    "site_counts": {
+      "utah_2019": 840,
+      "pohang": 277
+    },
+    "label_counts": {
+      "0": 915,
+      "1": 202
+    },
+    "label_name_counts": {
+      "noise": 915,
+      "event": 202
+    }
+  },
+  "test": {
+    "n_rows": 3379,
+    "n_groups": 179,
+    "site_counts": {
+      "utah_2023": 3379
+    },
+    "label_counts": {
+      "1": 1795,
+      "0": 1584
+    },
+    "label_name_counts": {
+      "event": 1795,
+      "noise": 1584
+    }
+  }
+}

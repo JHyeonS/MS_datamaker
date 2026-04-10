@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/ted1204/MS_datamaker_UTAH/scripts/make_utah_all_1s_images_upper_lower.py", line 11, in <module>
+    from obspy import read
+ModuleNotFoundError: No module named 'obspy'
+srun: error: jurassic13: task 0: Exited with exit code 1

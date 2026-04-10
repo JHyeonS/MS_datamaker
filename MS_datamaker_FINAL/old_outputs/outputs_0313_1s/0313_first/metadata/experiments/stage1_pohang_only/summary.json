@@ -1,0 +1,108 @@
+{
+  "experiment": "stage1_pohang_only",
+  "seed": 42,
+  "site": "pohang",
+  "description": "Site-specific experiment. Pretrain on same-site non-test groups. Fine-tune/evaluate on same-site labeled splits. Quota-first constrained group-aware split.",
+  "min_requirements": {
+    "train": {
+      "noise": 100,
+      "event": 20,
+      "rows": 0,
+      "groups": 1
+    },
+    "val": {
+      "noise": 30,
+      "event": 15,
+      "rows": 0,
+      "groups": 1
+    },
+    "test": {
+      "noise": 30,
+      "event": 15,
+      "rows": 0,
+      "groups": 1
+    }
+  },
+  "split_stats": {
+    "train": {
+      "noise": 420,
+      "event": 154,
+      "rows": 574,
+      "groups": 47
+    },
+    "val": {
+      "noise": 165,
+      "event": 124,
+      "rows": 289,
+      "groups": 17
+    },
+    "test": {
+      "noise": 165,
+      "event": 129,
+      "rows": 294,
+      "groups": 17
+    }
+  },
+  "pretrain": {
+    "n_rows": 3113,
+    "n_groups": 214,
+    "site_counts": {
+      "pohang": 3113
+    },
+    "label_counts": {
+      "2": 2250,
+      "0": 585,
+      "1": 278
+    },
+    "label_name_counts": {
+      "unlabel": 2250,
+      "noise": 585,
+      "event": 278
+    }
+  },
+  "train": {
+    "n_rows": 574,
+    "n_groups": 47,
+    "site_counts": {
+      "pohang": 574
+    },
+    "label_counts": {
+      "0": 420,
+      "1": 154
+    },
+    "label_name_counts": {
+      "noise": 420,
+      "event": 154
+    }
+  },
+  "val": {
+    "n_rows": 289,
+    "n_groups": 17,
+    "site_counts": {
+      "pohang": 289
+    },
+    "label_counts": {
+      "0": 165,
+      "1": 124
+    },
+    "label_name_counts": {
+      "noise": 165,
+      "event": 124
+    }
+  },
+  "test": {
+    "n_rows": 294,
+    "n_groups": 17,
+    "site_counts": {
+      "pohang": 294
+    },
+    "label_counts": {
+      "0": 165,
+      "1": 129
+    },
+    "label_name_counts": {
+      "noise": 165,
+      "event": 129
+    }
+  }
+}
