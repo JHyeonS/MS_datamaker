@@ -1,8 +1,0 @@
-Start make_inventory_pohang
-[DONE] saved: /home/ted1204/MS_Detection_Datamaker/MS_datamaker_PH/outputs/inventory.csv
-data_type
-event      304
-unlabel    150
-noise       50
-Name: count, dtype: int64
-DONE

@@ -1,8 +1,0 @@
-paths:
-  repo_root: /home/ted1204/MS_datamaker
-  raw_root: /home/ted1204/ms_datamaker_workspace/raw_data
-  inventory_root: /home/ted1204/ms_datamaker_workspace/inventories
-  segment_plan_root: /home/ted1204/ms_datamaker_workspace/segment_plans
-  output_root: /home/ted1204/ms_datamaker_workspace/output
-  output_npy_root: /home/ted1204/ms_datamaker_workspace/output_npy
-  log_root: /home/ted1204/ms_datamaker_workspace/logs

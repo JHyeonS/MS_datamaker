@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/home/ted1204/MS_datamaker_UTAH_2023/./scripts/sgy_to_npy_dataset.py", line 12, in <module>
-    from tqdm import tqdm
-ModuleNotFoundError: No module named 'tqdm'
-srun: error: jurassic13: task 0: Exited with exit code 1
