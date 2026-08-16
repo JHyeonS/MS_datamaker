@@ -7,6 +7,8 @@ from pathlib import Path
 import argparse
 import pandas as pd
 
+from datamaker.final.raw_metadata import infer_raw_sampling_rate
+
 VALID_EXTS = {".sgy", ".segy"}
 
 
@@ -16,7 +18,10 @@ def main():
     parser.add_argument("--out_csv", required=True)
     parser.add_argument("--site", default="utah_2023")
     parser.add_argument("--view", default="utah_2023")
-    parser.add_argument("--original_fs", type=float, default=1000.0)
+    parser.add_argument("--original_fs", type=float, default=1000.0,
+                        help="Logical sampling rate used for segment-plan time coordinates.")
+    parser.add_argument("--infer_header_fs", action="store_true",
+                        help="Opt in to raw-header fs inference. Default keeps the legacy/logical fs convention.")
     parser.add_argument("--ch_start", type=int, required=True)
     parser.add_argument("--ch_end", type=int, required=True)
     args = parser.parse_args()
@@ -29,6 +34,7 @@ def main():
 
     rows = []
     for p in files:
+        original_fs = infer_raw_sampling_rate(p, fallback_fs=args.original_fs) if args.infer_header_fs else float(args.original_fs)
         rows.append({
             "dataset_id": "utah_2023",
             "site": args.site,
@@ -38,7 +44,7 @@ def main():
             "file_stem": p.stem,
             "ext": p.suffix.lower(),
             "group_id": f"utah_2023__{p.stem}",
-            "original_fs": float(args.original_fs),
+            "original_fs": float(original_fs),
             "ch_start": int(args.ch_start),
             "ch_end": int(args.ch_end),
         })
@@ -49,6 +55,7 @@ def main():
 
     print(f"[DONE] saved: {args.out_csv}")
     print(f"[INFO] n_files: {len(df)}")
+    print(df["original_fs"].value_counts().sort_index())
 
 
 if __name__ == "__main__":

@@ -1440,9 +1440,31 @@ def main():
 
     max_unlabel_per_site = args.max_unlabel_per_site if args.max_unlabel_per_site > 0 else None
 
+    requested_sites = [str(x) for x in args.sites]
+    available_sites = [str(x) for x in sorted(pd.unique(df["site"]))]
+    active_sites = [site for site in requested_sites if site in available_sites]
+    skipped_sites = [site for site in requested_sites if site not in available_sites]
+
+    if len(active_sites) == 0:
+        raise RuntimeError(
+            f"None of the requested sites are present in all_csv. "
+            f"requested={requested_sites}, available={available_sites}"
+        )
+
+    site_selection = {
+        "requested_sites": requested_sites,
+        "available_sites": available_sites,
+        "active_sites": active_sites,
+        "skipped_sites": skipped_sites,
+    }
+    with open(out_root / "site_selection.json", "w", encoding="utf-8") as f:
+        json.dump(site_selection, f, ensure_ascii=False, indent=2)
+
+    if skipped_sites:
+        print(f"[WARN] skipping absent sites: {skipped_sites}; available={available_sites}")
 
     # stage 1
-    for site in args.sites:
+    for site in active_sites:
         build_stage1_site_only(
             df_all=df,
             site_name=site,
@@ -1482,14 +1504,37 @@ def main():
     )
 
     # stage 3
-    for src in args.sites:
-        for tgt in args.sites:
-            if src == tgt:
-                continue
-            build_stage3_pairwise(
+    if len(active_sites) >= 2:
+        for src in active_sites:
+            for tgt in active_sites:
+                if src == tgt:
+                    continue
+                build_stage3_pairwise(
+                    df_all=df,
+                    src_site=src,
+                    tgt_site=tgt,
+                    out_root=out_root,
+                    train_ratio=args.train_ratio,
+                    val_ratio=args.val_ratio,
+                    seed=args.seed,
+                    max_unlabel_per_site=max_unlabel_per_site,
+                    max_split_tries=args.max_split_tries,
+                    min_train_noise=args.min_train_noise,
+                    min_train_event=args.min_train_event,
+                    min_val_noise=args.min_val_noise,
+                    min_val_event=args.min_val_event,
+                    min_test_noise=args.min_test_noise,
+                    min_test_event=args.min_test_event,
+                )
+    else:
+        print("[WARN] skipping stage3 pairwise splits because fewer than 2 active sites are available")
+
+    # stage 4
+    if len(active_sites) >= 2:
+        for heldout in active_sites:
+            build_stage4_leave_one_out(
                 df_all=df,
-                src_site=src,
-                tgt_site=tgt,
+                heldout_site=heldout,
                 out_root=out_root,
                 train_ratio=args.train_ratio,
                 val_ratio=args.val_ratio,
@@ -1503,25 +1548,8 @@ def main():
                 min_test_noise=args.min_test_noise,
                 min_test_event=args.min_test_event,
             )
-
-    # stage 4
-    for heldout in args.sites:
-        build_stage4_leave_one_out(
-            df_all=df,
-            heldout_site=heldout,
-            out_root=out_root,
-            train_ratio=args.train_ratio,
-            val_ratio=args.val_ratio,
-            seed=args.seed,
-            max_unlabel_per_site=max_unlabel_per_site,
-            max_split_tries=args.max_split_tries,
-            min_train_noise=args.min_train_noise,
-            min_train_event=args.min_train_event,
-            min_val_noise=args.min_val_noise,
-            min_val_event=args.min_val_event,
-            min_test_noise=args.min_test_noise,
-            min_test_event=args.min_test_event,
-        )
+    else:
+        print("[WARN] skipping stage4 leave-one-site-out splits because fewer than 2 active sites are available")
 
     print(f"[DONE] saved experiments under: {out_root}")
 

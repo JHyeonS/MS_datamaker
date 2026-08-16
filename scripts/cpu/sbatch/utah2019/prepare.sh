@@ -16,7 +16,7 @@ conda activate MS_datamaker
 
 PROJECT_ROOT="/home/ted1204/MS_datamaker"
 cd "${PROJECT_ROOT}"
-export PYTHONPATH="${PROJECT_ROOT}:${PYTHONPATH:-}"
+export PYTHONPATH="${PROJECT_ROOT}/src:${PYTHONPATH:-}"
 
 OUT_ROOT="${PROJECT_ROOT}/outputs/utah2019"
 mkdir -p "${OUT_ROOT}"
@@ -33,8 +33,8 @@ EVENT_PLAN_CSV="${OUT_ROOT}/segment_plan_event.csv"
 NOISE_PLAN_CSV="${OUT_ROOT}/segment_plan_noise.csv"
 UNLABEL_PLAN_CSV="${OUT_ROOT}/segment_plan_unlabel.csv"
 
-python -m src.datamaker.utah2019.make_inventory_utah2019   --event_dir "${EVENT_DIR}"   --noise_dir "${NOISE_DIR}"   --unlabel_dir "${UNLABEL_DIR}"   --out_csv "${INVENTORY_CSV}"
+python -m datamaker.utah2019.make_inventory_utah2019   --event_dir "${EVENT_DIR}"   --noise_dir "${NOISE_DIR}"   --unlabel_dir "${UNLABEL_DIR}"   --out_csv "${INVENTORY_CSV}"
 
-python -m src.datamaker.utah2019.make_segment_plan_event_utah2019   --inventory_csv "${INVENTORY_CSV}"   --lower_label_csv "${LOWER_LABEL_CSV}"   --upper_label_csv "${UPPER_LABEL_CSV}"   --out_csv "${EVENT_PLAN_CSV}"
+python -m datamaker.utah2019.make_segment_plan_event_utah2019   --inventory_csv "${INVENTORY_CSV}"   --lower_label_csv "${LOWER_LABEL_CSV}"   --upper_label_csv "${UPPER_LABEL_CSV}"   --out_csv "${EVENT_PLAN_CSV}"
 
-python -m src.datamaker.utah2019.make_segment_plan_noise_unlabel_utah2019   --inventory_csv "${INVENTORY_CSV}"   --out_noise_csv "${NOISE_PLAN_CSV}"   --out_unlabel_csv "${UNLABEL_PLAN_CSV}"
+python -m datamaker.utah2019.make_segment_plan_noise_unlabel_utah2019   --inventory_csv "${INVENTORY_CSV}"   --out_noise_csv "${NOISE_PLAN_CSV}"   --out_unlabel_csv "${UNLABEL_PLAN_CSV}"

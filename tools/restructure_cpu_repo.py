@@ -342,7 +342,7 @@ Generated outputs should live outside the repo.
     print("1. Inspect src/datamaker/* for copied scripts")
     print("2. Inspect scripts/cpu for launcher duplication")
     print("3. Decide which legacy folders can remain as reference")
-    print("4. Update launcher calls to use: python -m src.datamaker....")
+    print("4. Update launcher calls to use: PYTHONPATH=src python -m datamaker....")
     print("5. Run small tests before deleting any legacy dirs")
 
 

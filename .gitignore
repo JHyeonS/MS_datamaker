@@ -1,66 +1,69 @@
-##################################
 # Python
-##################################
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
-
-##################################
-# Virtual Env
-##################################
-.venv/
-venv/
-env/
-
-##################################
-# Notebook
-##################################
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .ipynb_checkpoints/
 
-##################################
-# OS
-##################################
+# Environments
+.venv/
+venv/
+ENV/
+.env
+.env.*
+!.env.example
+
+# OS / editor
 .DS_Store
 Thumbs.db
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
 
-##################################
-# Logs
-##################################
+# Logs and runtime artifacts
 logs/
 *.log
 *.err
 *.out
-
-##################################
-# Experiment outputs
-##################################
-runs/
-outputs/
-checkpoints/
+slurm-*.out
 wandb/
+runs/
+checkpoints/
 
-##################################
-# Large model files
-##################################
-*.pt
-*.pth
-*.ckpt
-
-##################################
-# Dataset (핵심!)
-##################################
+# Raw, processed, and generated datasets
 data/
 datasets/
 raw_data/
 output/
-output_npy/
 outputs/
+output_npy/
 old_outputs/
+MS_datamaker_FINAL/input/
+MS_datamaker_FINAL/output/
+MS_datamaker_FINAL/outputs/
+MS_datamaker_FINAL/output_npy/
+MS_datamaker_FINAL/old_outputs/
+MS_datamaker_FINAL/logs/
+MS_datamaker_FINAL/analysis/
+MS_datamaker_PH/data/
+MS_datamaker_PH/csv/
+MS_datamaker_PH/outputs/
+MS_datamaker_PH/logs/
+MS_datamaker_UTAH_2019/data/
+MS_datamaker_UTAH_2019/csv/
+MS_datamaker_UTAH_2019/catalog/
+MS_datamaker_UTAH_2019/outputs/
+MS_datamaker_UTAH_2019/logs/
+MS_datamaker_UTAH_2023/data/
+MS_datamaker_UTAH_2023/csv/
+MS_datamaker_UTAH_2023/outputs/
+MS_datamaker_UTAH_2023/outputs_png/
+MS_datamaker_UTAH_2023/logs/
 
-##################################
-# Binary / large data formats
-##################################
+# Large/binary scientific data
 *.npy
 *.npz
 *.h5
@@ -68,13 +71,31 @@ old_outputs/
 *.tdms
 *.sgy
 *.segy
-*.gz
-*.[0-9]
+*.mat
+*.mseed
+*.sac
 
-##################################
-# Images (generated)
-##################################
+# Archives and generated figures/documents
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
 *.png
 *.jpg
 *.jpeg
-`9H`9H`9H`9H`9H
+*.tif
+*.tiff
+*.pdf
+*.pptx
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Keep public placeholders/examples if added intentionally
+!examples/**
+!metadata_examples/**
+!docs/**/*.md

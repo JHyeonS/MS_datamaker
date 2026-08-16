@@ -75,7 +75,10 @@ def main():
     report = {"sources": {}, "merged_counts": {}}
 
     for file_name, dtype in PLAN_NAMES:
-        paths = sorted(input_root.glob(f"*/{file_name}"))
+        paths = sorted(
+            p for p in input_root.glob(f"*/{file_name}")
+            if p.parent.name != "final"
+        )
         if len(paths) == 0:
             print(f"[WARN] no files found for {file_name}")
             merged_by_type[dtype] = pd.DataFrame()

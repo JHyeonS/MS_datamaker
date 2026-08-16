@@ -16,7 +16,7 @@ conda activate MS_datamaker
 
 PROJECT_ROOT="/home/ted1204/MS_datamaker"
 cd "${PROJECT_ROOT}"
-export PYTHONPATH="${PROJECT_ROOT}:${PYTHONPATH:-}"
+export PYTHONPATH="${PROJECT_ROOT}/src:${PYTHONPATH:-}"
 
 OUT_ROOT="${PROJECT_ROOT}/outputs/pohang"
 mkdir -p "${OUT_ROOT}"
@@ -32,8 +32,8 @@ EVENT_PLAN_CSV="${OUT_ROOT}/segment_plan_event.csv"
 NOISE_PLAN_CSV="${OUT_ROOT}/segment_plan_noise.csv"
 UNLABEL_PLAN_CSV="${OUT_ROOT}/segment_plan_unlabel.csv"
 
-python -m src.datamaker.pohang.make_file_inventory   --event_dir "${EVENT_DIR}"   --noise_dir "${NOISE_DIR}"   --unlabel_dir "${UNLABEL_DIR}"   --out_csv "${INVENTORY_CSV}"   --site pohang
+python -m datamaker.pohang.make_file_inventory   --event_dir "${EVENT_DIR}"   --noise_dir "${NOISE_DIR}"   --unlabel_dir "${UNLABEL_DIR}"   --out_csv "${INVENTORY_CSV}"   --site pohang
 
-python -m src.datamaker.pohang.make_segment_plan_event_pohang   --inventory_csv "${INVENTORY_CSV}"   --label_csv "${LABEL_CSV}"   --out_csv "${EVENT_PLAN_CSV}"
+python -m datamaker.pohang.make_segment_plan_event_pohang   --inventory_csv "${INVENTORY_CSV}"   --label_csv "${LABEL_CSV}"   --out_csv "${EVENT_PLAN_CSV}"
 
-python -m src.datamaker.pohang.make_segment_plan_noise_unlabel_pohang   --inventory_csv "${INVENTORY_CSV}"   --out_noise_csv "${NOISE_PLAN_CSV}"   --out_unlabel_csv "${UNLABEL_PLAN_CSV}"
+python -m datamaker.pohang.make_segment_plan_noise_unlabel_pohang   --inventory_csv "${INVENTORY_CSV}"   --out_noise_csv "${NOISE_PLAN_CSV}"   --out_unlabel_csv "${UNLABEL_PLAN_CSV}"

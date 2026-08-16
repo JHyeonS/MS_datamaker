@@ -5,10 +5,18 @@ from __future__ import annotations
 from pathlib import Path
 import argparse
 import pandas as pd
+from typing import Optional
+
+from datamaker.final.raw_metadata import infer_raw_sampling_rate
 
 VALID_EXTS = {".sgy", ".segy"}
 
-def scan_one(root_dir: Path, data_type: str) -> list[dict]:
+def resolve_inventory_fs(path: Path, original_fs: float, infer_header_fs: bool, fallback_fs: Optional[float]) -> float:
+    if infer_header_fs:
+        return infer_raw_sampling_rate(path, fallback_fs=fallback_fs if fallback_fs is not None else original_fs)
+    return float(original_fs)
+
+def scan_one(root_dir: Path, data_type: str, original_fs: float, infer_header_fs: bool, fallback_fs: Optional[float]) -> list[dict]:
     rows = []
     files = sorted(
         p for p in root_dir.rglob("*")
@@ -16,6 +24,7 @@ def scan_one(root_dir: Path, data_type: str) -> list[dict]:
     )
 
     for p in files:
+        fs = resolve_inventory_fs(p, original_fs=original_fs, infer_header_fs=infer_header_fs, fallback_fs=fallback_fs)
         rows.append({
             "dataset_id": "utah_2019",
             "site": "utah_2019",
@@ -25,7 +34,7 @@ def scan_one(root_dir: Path, data_type: str) -> list[dict]:
             "file_stem": p.stem,
             "ext": p.suffix.lower(),
             "group_id": f"utah_2019__{p.stem}",
-            "original_fs": 1000.0,
+            "original_fs": float(fs),
         })
     return rows
 
@@ -35,12 +44,18 @@ def main():
     ap.add_argument("--noise_dir", required=True)
     ap.add_argument("--unlabel_dir", required=True)
     ap.add_argument("--out_csv", required=True)
+    ap.add_argument("--original_fs", type=float, default=1000.0,
+                    help="Logical sampling rate used for segment-plan time coordinates.")
+    ap.add_argument("--infer_header_fs", action="store_true",
+                    help="Opt in to raw-header fs inference. Default keeps the legacy/logical fs convention.")
+    ap.add_argument("--fallback_fs", type=float, default=None,
+                    help="Fallback sampling rate used only if --infer_header_fs is set and header cannot be read.")
     args = ap.parse_args()
 
     rows = []
-    rows += scan_one(Path(args.event_dir), "event")
-    rows += scan_one(Path(args.noise_dir), "noise")
-    rows += scan_one(Path(args.unlabel_dir), "unlabel")
+    rows += scan_one(Path(args.event_dir), "event", args.original_fs, args.infer_header_fs, args.fallback_fs)
+    rows += scan_one(Path(args.noise_dir), "noise", args.original_fs, args.infer_header_fs, args.fallback_fs)
+    rows += scan_one(Path(args.unlabel_dir), "unlabel", args.original_fs, args.infer_header_fs, args.fallback_fs)
 
     df = pd.DataFrame(rows)
     Path(args.out_csv).parent.mkdir(parents=True, exist_ok=True)
@@ -48,6 +63,7 @@ def main():
 
     print(f"[DONE] saved: {args.out_csv}")
     print(df["data_type"].value_counts())
+    print(df["original_fs"].value_counts().sort_index())
 
 if __name__ == "__main__":
     main()

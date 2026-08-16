@@ -3,6 +3,7 @@ set -euo pipefail
 
 PROJECT_ROOT="/home/ted1204/MS_datamaker"
 cd "${PROJECT_ROOT}"
+mkdir -p logs
 
 jid_pohang=$(sbatch --parsable scripts/cpu/sbatch/pohang/prepare.sh)
 echo "[SUBMIT] pohang   : ${jid_pohang}"

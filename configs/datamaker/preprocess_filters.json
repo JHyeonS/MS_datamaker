@@ -1,0 +1,14 @@
+{
+  "pohang": {
+    "low_hz": null,
+    "high_hz": 50.0
+  },
+  "utah_2019": {
+    "low_hz": null,
+    "high_hz": 200.0
+  },
+  "utah_2023": {
+    "low_hz": null,
+    "high_hz": 500.0
+  }
+}

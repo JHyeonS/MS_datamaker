@@ -32,6 +32,8 @@ def normalize_stem(x):
         return None
     x = str(x).strip().replace("\\", "/")
     stem = Path(x).stem
+    stem = re.sub(r"^\d+_(RAW_.*)$", r"\1", stem)
+    return stem
 
 
 def lower_cols(df: pd.DataFrame) -> dict:

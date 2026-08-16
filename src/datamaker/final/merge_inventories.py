@@ -90,7 +90,10 @@ def main():
     args = parser.parse_args()
 
     input_root = Path(args.input_root)
-    inv_paths = sorted(input_root.glob("*/inventory.csv"))
+    inv_paths = sorted(
+        p for p in input_root.glob("*/inventory.csv")
+        if p.parent.name != "final"
+    )
 
     if len(inv_paths) == 0:
         raise RuntimeError(f"No inventory.csv found under: {input_root}")
